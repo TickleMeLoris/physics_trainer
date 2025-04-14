@@ -2,7 +2,7 @@
 
 [![Python](https://img.shields.io/badge/Python-3.9+-blue.svg)](https://python.org)
 [![Django](https://img.shields.io/badge/Django-4.0-brightgreen.svg)](https://djangoproject.com)
-[![Pylint](https://github.com/TickleMeLoris/physics_trainer/actions/workflows/pylint.yml/badge.svg)](https://github.com/podobry-m/history-dates/actions)
+[![Pylint](https://github.com/TickleMeLoris/physics_trainer/actions/workflows/pylint.yml/badge.svg)](https://github.com/TickleMeLoris/physics_trainer/actions)
 
 Проект для оттачивания навыков решения задач по физике через интерактивные тесты. Включает систему добавления задач по разным разделам и возможность выбора тематики тестов.
 
