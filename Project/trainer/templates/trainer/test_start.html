@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container mt-4">
+    <div class="card">
+        <div class="card-header">
+            <h2>Начать тестирование</h2>
+        </div>
+        <div class="card-body">
+            <form method="post">
+                {% csrf_token %}
+                <div class="mb-3">
+                    {{ form.topic.label_tag }}
+                    {{ form.topic }}
+                    {% if form.topic.errors %}
+                        <div class="alert alert-danger">{{ form.topic.errors }}</div>
+                    {% endif %}
+                </div>
+                <button type="submit" class="btn btn-primary">Начать тест</button>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

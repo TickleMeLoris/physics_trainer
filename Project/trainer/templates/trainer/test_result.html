@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container mt-4">
+    <h2>Результаты теста</h2>
+    
+    <div class="card mb-4">
+        <div class="card-body">
+            <h5 class="card-title">Итоговая оценка: {{ grade }}/5</h5>
+            <p class="card-text">
+                Набрано баллов: {{ session.score }} из {{ max_score }}<br>
+                Тип теста: {{ session.get_topic_display }}
+            </p>
+        </div>
+    </div>
+    
+    <h4>Детализация:</h4>
+    {% for answer in answers %}
+    <div class="card mb-2">
+        <div class="card-body">
+            <h6>Задача #{{ answer.problem.id }}</h6>
+            <p>{{ answer.problem.description }}</p>
+            <p>
+                Ваш ответ: {{ answer.user_answer }}<br>
+                Верный ответ: {{ answer.problem.answer }}<br>
+                <span class="badge bg-{% if answer.is_correct %}success{% else %}danger{% endif %}">
+                    {% if answer.is_correct %}Верно (+{{ answer.problem.difficulty }} баллов){% else %}Неверно{% endif %}
+                </span>
+            </p>
+        </div>
+    </div>
+    {% endfor %}
+    
+    <a href="{% url 'start-test' %}" class="btn btn-primary mt-3">Пройти ещё раз</a>
+</div>
+{% endblock %}

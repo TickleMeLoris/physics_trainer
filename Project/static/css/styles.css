@@ -1,0 +1,22 @@
+.problem-navigation {
+    margin-bottom: 2rem;
+}
+.problem-id {
+    font-weight: bold;
+    align-self: center;
+}
+
+.jumbotron {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    border-radius: 0.5rem;
+}
+
+.problem-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.card-header h4 {
+    margin-bottom: 0;
+}
