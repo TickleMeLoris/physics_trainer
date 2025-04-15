@@ -2,7 +2,6 @@ import random
 from django.utils import timezone
 from django.http import HttpResponse, Http404
 from django.shortcuts import render, redirect, get_object_or_404
-from sympy import sympify, Eq
 from sympy.parsing.sympy_parser import parse_expr
 from .models import Problem, TestSession, UserAnswer
 from .forms import TestConfigForm
