@@ -1,0 +1,22 @@
+[MASTER]
+ignore=.venv,venv,env,migrations
+load-plugins=pylint_django
+
+[MESSAGES CONTROL]
+disable=
+    C0114,  # Missing module docstring
+    C0115,  # Missing class docstring
+    C0116,  # Missing function docstring
+    W0611,  # Unused import
+    R0901,  # Too many ancestors
+    R0903,  # Too few public methods
+    C0301,  # Line too long
+    W0222,  # Signature differs from parent method
+    E1101,  # Instance of ... has no ... member (Django models)
+    E1136,  # Value '...' is unsubscriptable (Django QuerySet)
+    E1137,  # ... has no ... member (Django related fields)
+    E1139,  # Invalid metaclass
+    E1205,  # Too many arguments for Django model __init__
+
+[FORMAT]
+max-line-length=120
