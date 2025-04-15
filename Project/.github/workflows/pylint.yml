@@ -25,4 +25,4 @@ jobs:
 
       - name: Run Pylint
         run: |
-          pylint --rcfile=.pylintrc ./conf/
+          pylint --rcfile=.pylintrc ./Project/
