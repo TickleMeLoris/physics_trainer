@@ -1,5 +1,5 @@
 [MASTER]
-ignore=.venv,venv,env,migrations
+ignore=.venv,venv,env,migrations,manage.py, views.py, urls.py
 load-plugins=pylint_django
 
 [MESSAGES CONTROL]
