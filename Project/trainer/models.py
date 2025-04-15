@@ -15,8 +15,8 @@ class Problem(models.Model):
     )
     
     description = models.TextField()
-    formula = models.CharField(max_length=200)  # LaTeX-формула
-    answer = models.CharField(max_length=100)   # Ответ в SymPy-формате
+    formula = models.CharField(max_length=200)
+    answer = models.CharField(max_length=100)
     difficulty = models.IntegerField(default=1)
     created_at = models.DateTimeField(auto_now_add=True)
 
@@ -44,7 +44,7 @@ class TestSession(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE, null=True, blank=True)
     score = models.IntegerField(default=0)
     completed = models.BooleanField(default=False)
-    problem_ids = models.JSONField(default=list)  # Поле для хранения списка ID задач
+    problem_ids = models.JSONField(default=list)
     
     def __str__(self):
         return f"TestSession {self.id} - {self.get_topic_display()}"
