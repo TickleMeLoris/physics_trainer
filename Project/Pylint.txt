@@ -1,0 +1,11 @@
+D:\Desktop\DJango\Project>pylint --rcfile=.pylintrc trainer/
+************* Module trainer
+trainer\__init__.py:1:0: E5110: Django was not configured. For more information run pylint --load-plugins=pylint_django --help-msg=django-not-configured (django-not-configured)
+************* Module trainer.models
+trainer\models.py:2:0: E5142: User model imported from django.contrib.auth.models (imported-auth-user)
+************* Module trainer.views
+trainer\views.py:14:4: W0702: No exception type(s) specified (bare-except)
+trainer\views.py:28:11: W0718: Catching too general exception Exception (broad-exception-caught)
+
+------------------------------------------------------------------
+Your code has been rated at 9.01/10
